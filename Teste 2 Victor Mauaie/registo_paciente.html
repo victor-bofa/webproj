@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+<meta charset="utd-8">
+
+   <title>Formulario de registo de Paciente</title>
+ <link rel="stylesheet" type="text/css" href="registo_paciente.css">
+</head>
+<body>
+
+	<form method="pos">
+<fieldset>
+  <HR SIZE=7 color="black">
+
+</center>
+<h2 align=center>CLINICA ACADÉMICA DA UJC</h2>
+<h2 align=center>FORMULÁRIO DO PACIENTE</h2>
+<p align=center align="justify"> <label>Nº de processo: <input type="number" name="Nproc" min="0"/></label></p>
+<p>.</p>
+
+<fieldset><legend align="center"><b>Dados do Paciente</b></legend>
+<p align="left"><label> Apelido<input type="text" name="apel"/></label> <label>Nome completo <input type="text" name="nome"/></label><br>
+<label>Filho de <input type="text" name="Npai" placeholder="Nome completo"/></label> e <label>de <input type="text" name="Nmae" placeholder="Nome completo"/></label> <br>
+<label>Natural de <input type="text" name="natural"/></label> <label>Distrito de <input type="text" name="distrito" placeholder=""/></label>
+<label>Provincia de 
+ <select name="" >
+    <option value="CM"> Maputo Cidade</option>
+     <option value="MP"> Maputo Provincia</option>
+    <option value="GZ"> Gaza</option>
+    <option value="IB"> Inhambane</option>
+    <option value="MN"> Manica</option>
+    <option value="SF"> Sofala</option>
+    <option value="Tt"> Tete</option>
+    <option value="NP"> Nampula</option>
+    <option value="ZB"> Zambezia</option>
+    <option value="NS"> Niassa</option>
+    <option value="CB"> Cabo delgado</option> </select></label>
+<label>Data de nascimento <input type="date" name="data"/></label>
+<label>Sexo
+      <select name="">
+        <option value="Sexo"> Masculino</option>
+        <option value="Sexo"> Femenino</option>
+      </select></label>
+
+<label>BI Nr <input type="number" name="BI" min=0/></label>
+
+<label>Local de emissão <input type="text" name="Lmissao"/></label> 
+
+<label>Data de emissão <input type="date" name="Demissao"/></label> 
+
+<label>Valido ate <input type="date" name="val"/></label><br>
+
+<label>Bairro <input type="text" name="resid"/></label> 
+
+<label>Av/Rua <input type="text" name="bairro"/></label>
+
+<label>Nº da casa<input type="number" name="Ncasa" min="0"/></label> 
+
+<label>Telefone <input type="number" name="contact" min="0"/></label><br>
+
+<label>E-mail <input type="email" name="emai"/></label>
+
+ <label>Estado Civil <input type="text" name="Ecivil"/></label>
+
+ 
+
+<label>NIB <input type="number" name="nib" min="0"/></label>
+
+<label>Grupo Sanguineo 
+ <select name="" >
+    <option value="O"> O</option>
+     <option value="A"> A</option>
+    <option value="B"> B</option>
+    <option value="AB"> AB</option>
+     </select></label>
+</fieldset>
+</p>
+
+
+
+<button onclick="validarCampos()">Submeter</button>
+<p id="validacao"></p>
+
+</form>
+    
+
+<HR SIZE=7 color="black">
+    
+    <script type="text/javascript">
+    	
+    	document.getElementById("btSubmeter").style.visibility="hidden";
+    	function validarCampos(){
+    		var lista=document.getElementByIdClaaName("geral");
+    		for(var orden=0; lista.length; orden++){
+    			if(lista[orden].value==""){
+    				lista[orden].style.background="red";
+    				document.getElementById("validacao").style.display="inline";
+    				document.getElementById("validacao").innerHTML="Preencha os campos a vermelho";
+    				bataoValidacao()    			}
+    				else{
+    					lista[orden].style.background="blue";
+    					lista[orden].style.color="black";
+
+    				}
+    		}
+    	}
+
+    	function botaoValidacao(){
+    		document.getElementById("btSubmeter").innerHTML="";
+    		document.getElementById("btSubmeter").style.visibility="visible"
+    		
+    	}
+    </script>
+
+
+</body>
+</html>

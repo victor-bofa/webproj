@@ -1,0 +1,33 @@
+body{
+	background-color: #ADD6A1;
+	font-family: Arial;
+}
+
+.links-menu{
+	display: block;
+	text-align: center;
+	margin-bottom: 10px;
+}
+
+.menu-item{
+	color: white;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-bottom:3px solid #eee;
+	text-decoration: none;
+	font-size: 14px;
+	font-family: Arial;
+}
+
+a{
+	border: solid 2px black;
+	background-color: black;
+	padding:5px 15px;
+	color: white;
+	font-size: 12px;
+	font-weight: bold;
+	text-decoration: none;
+	font-family: times;
+}
